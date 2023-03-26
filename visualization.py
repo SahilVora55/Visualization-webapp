@@ -29,6 +29,7 @@ def plot_graphs(df, x_cols, y_cols, graph_type, plot_size):
     b64 = base64.b64encode(data).decode()
     href = f'<a href="data:file/png;base64,{b64}" download="{filename}">Download Plot</a>'
     st.markdown(href, unsafe_allow_html=True)
+    st.write('<span style="color:green">Downloaded successfully.', unsafe_allow_html=True)
 
 def plot_boxplot(df, column, plot_size):
     fig = px.box(df, y=column)
@@ -49,6 +50,7 @@ def plot_boxplot(df, column, plot_size):
     b64 = base64.b64encode(data).decode()
     href = f'<a href="data:file/png;base64,{b64}" download="{filename}">Download Plot</a>'
     st.markdown(href, unsafe_allow_html=True)
+    st.write('<span style="color:green">Downloaded successfully.', unsafe_allow_html=True)
 
 def plot_histogram(df, column, plot_size):
     if column not in df.columns:
@@ -71,6 +73,7 @@ def plot_histogram(df, column, plot_size):
     b64 = base64.b64encode(data).decode()
     href = f'<a href="data:file/png;base64,{b64}" download="{filename}">Download Plot</a>'
     st.markdown(href, unsafe_allow_html=True)
+    st.write('<span style="color:green">Downloaded successfully.', unsafe_allow_html=True)
   
 
 st.set_page_config(page_title="Data Visualization Web App", page_icon=":bar_chart:", layout="wide")
@@ -155,6 +158,7 @@ if uploaded_file is not None:
                 b64 = base64.b64encode(data).decode()
                 href = f'<a href="data:file/png;base64,{b64}" download="{filename}">Download Plot</a>'
                 st.markdown(href, unsafe_allow_html=True)
+                st.write('<span style="color:green">Downloaded successfully.', unsafe_allow_html=True)
 
 
     # add vertical line between the columns

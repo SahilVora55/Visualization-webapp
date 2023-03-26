@@ -1,8 +1,5 @@
-numpy
-pandas
 streamlit
-scikit-learn
-xgboost
-matplotlib
-Pillow
+pandas
 plotly
+seaborn
+matplotlib
